@@ -100,9 +100,9 @@ const analysis = async () => {
   // Get maximum number of trips taken by a driver
   const tripsByDrivers = Object.values(noOfTripsByDriver);
   const maxTrips = Math.max(...tripsByDrivers);
-  let topDriver = {};
-
+  
   // Get info of drivers with most trips
+  let topDriver = {};
   for (let trip of tripsInfo) {
     if (!(topDriver.hasOwnProperty(trip.driverID))) {
       if (noOfTripsByDriver[trip.driverID] === maxTrips) {
@@ -157,4 +157,5 @@ const analysis = async () => {
 
 }
 
+analysis()
 module.exports = analysis;

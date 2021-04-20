@@ -28,9 +28,9 @@ async function driverReport() {
         billed: trip.billedAmount,
         isCash: trip.isCash
       };
-      let vehicleInfo;
-
+      
       // Get vehicle info per trip
+      let vehicleInfo;
       if (vehicles) {
         vehicleInfo = {
           "manufacturer": vehicles.manufacturer,
@@ -69,13 +69,13 @@ async function driverReport() {
   // console.log(tripsInfo);
 
 
-  // Number of trips per driver 
-
+  
   // Get unique driver info
   const uniqueTripsInfo = Array.from(new Set(tripsInfo));
   // console.log(uniqueTripsInfo.length);
-  const noOfTripsByDriver = {};
   
+  // Number of trips per driver 
+  const noOfTripsByDriver = {};
   for (let driver of uniqueTripsInfo) {
     if (!noOfTripsByDriver.hasOwnProperty(driver.driverID)) {
       noOfTripsByDriver[driver.driverID] = 1;
