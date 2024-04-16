@@ -1,8 +1,8 @@
 {
-  "name": "decagon-tests",
+  "name": "engineering-problem-2",
   "version": "1.0.0",
   "main": "src/classifier.js",
-  "author": "Bond <bond@decagon.institute>",
+  "author": "kizito <kizitoinegbenose@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {

@@ -1,9 +1,9 @@
-const analysis = require('../src/analysis');
-const driverReport = require('../src/report');
-const report = require('../fixtures/report.json');
+const analysis = require("../src/analysis");
+const driverReport = require("../src/report");
+const report = require("../fixtures/report.json");
 
-describe('analysis spec', () => {
-  test('matches the required data format', () => {
+describe("analysis spec", () => {
+  test("matches the required data format", () => {
     return expect(analysis()).resolves.toEqual({
       noOfCashTrips: expect.any(Number),
       noOfNonCashTrips: expect.any(Number),
@@ -28,7 +28,7 @@ describe('analysis spec', () => {
     });
   });
 
-  test('analysis solution', () => {
+  test("analysis solution", () => {
     return expect(analysis()).resolves.toEqual({
       noOfCashTrips: 26,
       noOfNonCashTrips: 24,
@@ -37,16 +37,16 @@ describe('analysis spec', () => {
       nonCashBilledTotal: 59180.89,
       noOfDriversWithMoreThanOneVehicle: 3,
       mostTripsByDriver: {
-        name: 'Bush Gibbs',
-        email: 'bushgibbs@example.com',
-        phone: '+234 808-204-2520',
+        name: "Bush Gibbs",
+        email: "bushgibbs@example.com",
+        phone: "+234 808-204-2520",
         noOfTrips: 7,
         totalAmountEarned: 17656.46,
       },
       highestEarningDriver: {
-        name: 'Hughes Strickland',
-        email: 'hughesstrickland@example.com',
-        phone: '+234 808-084-4833',
+        name: "Hughes Strickland",
+        email: "hughesstrickland@example.com",
+        phone: "+234 808-084-4833",
         noOfTrips: 7,
         totalAmountEarned: 24508.77,
       },
@@ -54,8 +54,8 @@ describe('analysis spec', () => {
   });
 });
 
-describe('driver report', () => {
-  test('matches the required data format', async () => {
+describe("driver report", () => {
+  test("matches the required data format", async () => {
     expect(driverReport()).resolves.toEqual(report);
   });
 });
