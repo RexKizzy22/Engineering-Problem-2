@@ -1,4 +1,4 @@
-# API
+# Trips Analysis
 
 The api module exposes the following function
 
@@ -50,7 +50,7 @@ Returns information about the driver with the specified `id` of the format
 The vehicle ID field contains the ids of the vehicles that has been assigned to the driver.
 
 If the ID of the driver is not found, `getDriver` throws `Driver not found` error.
-In some scenarios, you should still include that driver in the analysis and report but elide the name and vehicle information.
+In some scenarios, you should still include that driver in the ysysis and report but elide the name and vehicle information.
 
 ### getVehicle
 
